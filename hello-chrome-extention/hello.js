@@ -1,10 +1,13 @@
 document.getElementById("change_blue").onclick = () => {
-    console.log("click");
-    changeBackgroundColor();
+    chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+        chrome.scripting.executeScript({
+            target: {tabId: tabs[0].id},
+            function: changeBackgroundColor,
+        });
+    });
 };
 
 function changeBackgroundColor() {
-    var body = document.getElementById("popup_body");
-    body.style.backgroundColor = "blue";
+    document.body.style.backgroundColor = "blue";
     console.log("Changed background color to blue.");
 }
