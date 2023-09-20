@@ -1,0 +1,45 @@
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <div id="popup_body" style="width: 400px">
+            <h1>QR code viewer</h1>
+            <div style="display: flex; flex-direction: column;">
+                <div style="margin: 20px;">
+                    <input
+                        type="button"
+                        id="url_qrcode_button"
+                        value="View QR code of current page URL"
+                    />
+                </div>
+                <div style="margin: 20px;">
+                    <div>
+                        <textarea id="text_qrdoce_textarea"
+                        name="name" cols="30"></textarea>
+                    </div>
+                    <div>
+                        <input
+                            type="button"
+                            id="textarea_qrcode_button"
+                            value="View QR code of input text"
+                        />
+                    </div>
+                    <div>
+                        <input
+                            type="button"
+                            id="textarea_save_button"
+                            value="Save the text"
+                        />
+                    </div>
+                </div>
+                <div style="margin: 20px;">
+                    <p>QR code:<span id="qrcode_text"></span></p>
+                    <div id="qrcode" style="padding: 0px 20px;"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="qr_viewer.js"></script>
+    <script type="text/javascript" src="qrcode.min.js"></script>
+</html>

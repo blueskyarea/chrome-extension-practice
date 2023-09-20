@@ -1,0 +1,19 @@
+{
+    "name": "QR code viewer",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "qr_viewer.html",
+        "default_icon": "qr_icon.png"
+    },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+F",
+                "mac": "MacCtrl+Shift+F"
+            }
+        }
+    },
+    "permissions": ["scripting", "tabs", "storage"],
+    "host_permissions": ["http://*/*", "https://*/*"]
+}
